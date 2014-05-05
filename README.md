@@ -1,13 +1,13 @@
-#modulename
+#ohmyzsh
 
 ####Table of Contents
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with [Modulename]](#setup)
-    * [What [Modulename] affects](#what-[modulename]-affects)
+3. [Setup - The basics of getting started with ohmyzsh](#setup)
+    * [What ohmyzsh affects](#what-ohmyzsh-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with [Modulename]](#beginning-with-[Modulename])
+    * [Beginning with ohmyzsh](#beginning-with-ohmyzsh)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -15,47 +15,71 @@
 
 ##Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves. This is your 30 second elevator pitch for your module. Consider including OS/Puppet version it works with.       
+Decorate specified **User Accounts** with Robby Russell's **oh-my-zsh**
+ZSH Framework (https://github.com/robbyrussell/oh-my-zsh).
 
 ##Module Description
 
-If applicable, this section should have a brief description of the technology the module integrates with and what that integration enables. This section should answer the questions: "What does this module *do*?" and "Why would I use it?"
-    
-If your module has a range of functionality (installation, configuration, management, etc.) this is the time to mention it.
+This module ensures that:
+
+1. **ZSH** is installed and set as the default shell used by the specified **User**.  
+2. **GIT** is installed.
+
+The module clones a copy of oh-my-zsh from https://github.com/robbyrussell/oh-my-zsh
+to the user's home directory and adds a pre-defined custom theme and *.zshrc* file.
 
 ##Setup
 
-###What [Modulename] affects
+###What ohmyzsh affects
 
-* A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form. 
+* package files for **ZSH** and **GIT**.
+* User's **.zshrc** file.
+* */etc/passwd* file (defines what the user's default shell should be).
 
 ###Setup Requirements **OPTIONAL**
 
-If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here. 
+NOTHING. 
 	
-###Beginning with [Modulename]	
+###Beginning with ohmyzsh	
 
-The very basic steps needed for a user to get the module up and running. 
+To begin using the ohmyzsh module:
 
-If your most recent release breaks compatibility or requires particular steps for upgrading, you may wish to include an additional section here: Upgrading (For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+```include ohmyzsh```
+
+```
+$vagrant = 'vagrant'
+  $root = 'root'
+
+  ohmyzsh::setup { "${vagrant}":
+    user => "${vagrant}",
+  }
+
+  ohmyzsh::setup { "${root}":
+    user => "${root}",
+  }
+```
 
 ##Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here. 
+NOTHING. 
 
 ##Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module. This section should include all of the under-the-hood workings of your module so people know what the module is touching on their system but don't need to mess with things. (We are working on automating this section!)
+NOTHING.
 
 ##Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+This module has only been tested on CentOS-6.4-x64
 
 ##Development
 
-Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
+This module is an open project, community involvement is welcome in ensuring this 
+module stays current.
+
+We want to keep it as easy as possible to contribute changes so that our modules 
+work in your environment. There are a few guidelines that contributors should 
+follow so that we can have a chance of keeping on top of things.  We are happy to
+follow the guidlines Puppet Labs themselves have developed at [Puppet Labs wiki](http://projects.puppetlabs.com/projects/module-site/wiki/Module_contributing).
 
 ##Release Notes/Contributors/Etc **Optional**
 
