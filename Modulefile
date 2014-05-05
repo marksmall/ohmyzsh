@@ -1,4 +1,4 @@
-name    'msmall-ohmyzsh'
+name    'marksmall-ohmyzsh'
 version '0.1.0'
 source ''
 author 'Mark Small'

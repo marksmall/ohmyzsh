@@ -1,13 +1,13 @@
 {
-  "name": "msmall-ohmyzsh",
+  "name": "marksmall-ohmyzsh",
   "version": "0.1.0",
-  "summary": "",
-  "author": "",
-  "description": "",
+  "summary": "Decorate User Accounts with oh-my-zsh",
+  "author": "Mark Small",
+  "description": "This module is used to decorate specific User Accounts with ZSH and oh-my-zsh framework",
   "dependencies": [],
   "types": [],
   "checksums": {},
   "source": "",
-  "project_page": "",
-  "license": ""
+  "project_page": "https://github.com/marksmall/ohmyzsh",
+  "license": "MIT"
 }
