@@ -1,3 +1,11 @@
+# 2014-05-05 Supported Release v0.1
+
+## Summary
+
+This is the initial release of the ohmyzsh module.
+
+## Features
+
 Mark Small (6):
       Ensure ZSH & GIT installed:
       Define type to configure oh-my-zsh for a specific user:
