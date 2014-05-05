@@ -7,7 +7,7 @@
   "dependencies": [],
   "types": [],
   "checksums": {},
-  "source": "",
+  "source": "git@github.com:marksmall/ohmyzsh.git",
   "project_page": "https://github.com/marksmall/ohmyzsh",
   "license": "MIT"
 }

@@ -1,6 +1,6 @@
 name    'marksmall-ohmyzsh'
 version '0.1.0'
-source ''
+source 'git@github.com:marksmall/ohmyzsh.git'
 author 'Mark Small'
 license 'MIT'
 summary 'Decorate User Accounts with oh-my-zsh'
